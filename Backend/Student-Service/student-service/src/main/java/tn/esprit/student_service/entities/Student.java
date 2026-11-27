@@ -2,10 +2,12 @@
 package tn.esprit.student_service.entities;
 
 import jakarta.persistence.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import java.time.LocalDate;
 import java.util.Set;
+
 
 @Entity
 @Getter
@@ -34,6 +36,7 @@ public class Student {
 
     private String status;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "student")
     private Set<Enrollment> enrollments;
 }
