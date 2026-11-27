@@ -83,4 +83,22 @@ Le lancement de l'ensemble avec Docker Compose sera ajouté pendant la phase de 
 - Gestion de projet : Trello (lien :https://trello.com/invite/b/6af50b2212803533adfffa06/ATTIf6a460b42bc3480937d2542dbf77dfb0F99FCFAA/mon-tableau-trello)
 - Branche `main` et une branche `feature/<service>` par membre, Pull Request vers `main`
 
+  ## Eureka
+
+![Dashboard Eureka](Documentation/captures/eureka-dashboard.png)
+
+## Actuator
+
+### /actuator/health
+![health](Documentation/captures/actuator-health.png)
+
+### /actuator/info
+![info](Documentation/captures/actuator-info.png)
+
+### /actuator/metrics
+![metrics](Documentation/captures/actuator-metrics.png)
+
+### /actuator/metrics/http.server.requests
+![requêtes](Documentation/captures/actuator-metrics-http.png)
+
 
