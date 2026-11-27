@@ -24,7 +24,7 @@ public class AttendanceRecord {
     @Column
     private String remark;
 
-    @NotNull
+    // The sheet is assigned by the service, not by the JSON request
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "sheet_id", nullable = false)
     @JsonIgnore
