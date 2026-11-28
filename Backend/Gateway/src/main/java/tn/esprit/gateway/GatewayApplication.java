@@ -28,6 +28,9 @@ public class GatewayApplication {
         return builder.routes()
                 .route("CampusLife", r -> r.path("/events/**", "/registrations/**")
                         .uri("lb://campus-life-service"))
+                .route("CampusLifeDocs", r -> r.path("/campus-life/v3/api-docs")
+                        .filters(f -> f.rewritePath("/campus-life/(?<segment>.*)", "/${segment}"))
+                        .uri("lb://campus-life-service"))
                 .build();
     }
 

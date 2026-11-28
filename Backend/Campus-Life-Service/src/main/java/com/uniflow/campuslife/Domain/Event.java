@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.Set;
 
 @Entity
@@ -25,8 +25,8 @@ public class Event {
     String location;
     @Enumerated(value = EnumType.STRING)
     Category category;
-    LocalDateTime startDate;
-    LocalDateTime endDate;
+    LocalDate startDate;
+    LocalDate endDate;
     Integer capacity;
     @Enumerated(value = EnumType.STRING)
     EventStatus status;
