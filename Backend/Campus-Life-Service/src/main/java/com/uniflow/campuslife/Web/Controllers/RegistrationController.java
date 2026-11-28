@@ -1,15 +1,17 @@
-package com.uniflow.campuslife.Controllers;
+package com.uniflow.campuslife.Web.Controllers;
 
 import com.uniflow.campuslife.Domain.Registration;
 import com.uniflow.campuslife.Services.IRegistrationServices;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("registrations")
+@Tag(name = "Registrations", description = "Gestion des inscriptions aux événements")
 public class RegistrationController {
     private final IRegistrationServices iRegistrationServices;
 

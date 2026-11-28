@@ -1,9 +1,10 @@
-package com.uniflow.campuslife.Controllers;
+package com.uniflow.campuslife.Web.Controllers;
 
 import com.uniflow.campuslife.Domain.Event;
 import com.uniflow.campuslife.Services.IEventServices;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,6 +13,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("events")
+@Tag(name = "Events", description = "Gestion des événements du campus")
 public class EventController {
     private final IEventServices iEventServices;
 
